@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🥷 Misión Ninja Eric</title>
-
-```
 <style>
     * {
         box-sizing: border-box;
     }
-
     body {
         margin: 0;
         min-height: 100vh;
@@ -25,7 +22,6 @@
         padding: 25px;
         overflow-x: hidden;
     }
-
     /* Luces de fondo */
     body::before,
     body::after {
@@ -38,32 +34,27 @@
         opacity: 0.15;
         pointer-events: none;
     }
-
     body::before {
         background: #e53935;
         top: -150px;
         left: -150px;
     }
-
     body::after {
         background: #1565c0;
         bottom: -150px;
         right: -150px;
     }
-
     .container {
         width: 100%;
         max-width: 700px;
         position: relative;
         z-index: 1;
     }
-
     .ninja {
         text-align: center;
         font-size: 70px;
         animation: float 3s ease-in-out infinite;
     }
-
     @keyframes float {
         0%, 100% {
             transform: translateY(0);
@@ -72,7 +63,6 @@
             transform: translateY(-10px);
         }
     }
-
     h1 {
         text-align: center;
         margin: 5px 0 8px;
@@ -83,14 +73,12 @@
             3px 3px 0 #000,
             0 0 20px rgba(255,255,255,0.25);
     }
-
     .subtitle {
         text-align: center;
         color: #ddd;
         margin-bottom: 25px;
         font-size: 17px;
     }
-
     .mission-card {
         background:
             linear-gradient(
@@ -106,7 +94,6 @@
             inset 0 1px 0 rgba(255,255,255,0.08);
         backdrop-filter: blur(10px);
     }
-
     .mission-title {
         text-align: center;
         font-size: 22px;
@@ -115,20 +102,16 @@
         text-transform: uppercase;
         letter-spacing: 2px;
     }
-
     .text {
         font-size: 18px;
         line-height: 1.7;
     }
-
     .text p {
         margin: 0 0 20px;
     }
-
     .highlight {
         font-weight: bold;
     }
-
     .audio-box {
         margin-top: 30px;
         padding: 22px;
@@ -137,18 +120,15 @@
         border: 1px solid rgba(255,255,255,0.15);
         text-align: center;
     }
-
     .audio-title {
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 15px;
     }
-
     audio {
         width: 100%;
         max-width: 500px;
     }
-
     .reward {
         margin-top: 25px;
         padding: 20px;
@@ -157,24 +137,20 @@
         background: rgba(255,255,255,0.06);
         border: 1px dashed rgba(255,255,255,0.3);
     }
-
     .reward .emoji {
         font-size: 40px;
     }
-
     .reward strong {
         display: block;
         margin-top: 8px;
         font-size: 20px;
     }
-
     .footer {
         text-align: center;
         margin-top: 25px;
         color: #aaa;
         font-size: 14px;
     }
-
     .start-button {
         display: block;
         margin: 0 auto 25px;
@@ -189,16 +165,13 @@
         box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         transition: transform 0.2s, background 0.2s;
     }
-
     .start-button:hover {
         transform: scale(1.05);
         background: #d32f2f;
     }
-
     .start-button:active {
         transform: scale(0.98);
     }
-
     @media (max-width: 600px) {
         body {
             padding: 15px;
@@ -217,113 +190,72 @@
         }
     }
 </style>
-```
-
 </head>
 
 <body>
-
 <div class="container">
-
-```
 <div class="ninja">🥷🐉</div>
-
 <h1>Misión Ninja Eric</h1>
-
 <div class="subtitle">
     Una misión secreta ha llegado hasta ti...
 </div>
-
 <button class="start-button" onclick="reproducirMision()">
     ▶ ESCUCHAR LA MISIÓN
 </button>
-
 <div class="mission-card">
-
     <div class="mission-title">
         ⚔️ Misión especial ⚔️
     </div>
-
     <div class="text">
-
         <p>
             ¡Hola, <span class="highlight">Ninja Eric!</span> 🥷🐉
         </p>
-
         <p>
             Tengo una misión muy importante para ti...
         </p>
-
         <p>
             Tu misión es demostrar que eres un
             <span class="highlight">auténtico ninja:</span>
             escuchar, hacer caso, portarte muy bien y ayudar cuando sea necesario.
             💪🥷
         </p>
-
         <p>
             Si completas la misión
             <span class="highlight">—¡que sé que eres capaz!—</span>
-            dentro de este sobre encontrarás un anticipo de tu recompensa especial.
+            dentro de este sobre encontrarás un adelanto de tu recompensa especial.
             🎁⚔️
         </p>
-
         <p>
             ¡Prepárate, reúne tu valor y demuestra de lo que eres capaz!
         </p>
-
         <p>
             <span class="highlight">
                 ¡La misión comienza ahora! 🐉
             </span>
         </p>
-
         <p>
             ¡Buena suerte, Ninja Eric! 🥷⚔️
         </p>
-
     </div>
-
-    <div class="audio-box">
-
-        <div class="audio-title">
-            🎙️ Mensaje secreto del maestro ninja
-        </div>
-
-        <audio id="audioMision" controls preload="metadata">
-            <source src="cole_eric_listo.mp3" type="audio/mpeg">
-            Tu navegador no puede reproducir este audio.
-        </audio>
-
-    </div>
-
     <div class="reward">
         <div class="emoji">🎁🐉⚔️</div>
         <strong>Tu recompensa te espera...</strong>
         Completa tu misión, Ninja Eric.
     </div>
-
 </div>
-
 <div class="footer">
     🥷 Solo los verdaderos ninjas pueden completar esta misión 🥷
 </div>
-```
-
 </div>
-
 <script>
     function reproducirMision() {
         const audio = document.getElementById("audioMision");
-
         audio.play();
-
         audio.scrollIntoView({
             behavior: "smooth",
             block: "center"
         });
     }
 </script>
-
 </body>
 </html>
