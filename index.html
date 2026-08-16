@@ -3,14 +3,17 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>🥷 Misión Ninja Eric</title>
 
 <!-- Icono de la pestaña -->
 <link rel="icon" href="data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥷</text></svg>">
+
 
 <style>
 
@@ -18,8 +21,11 @@
         box-sizing: border-box;
     }
 
+
     body {
+
         margin: 0;
+
         min-height: 100vh;
 
         font-family: Arial, Helvetica, sans-serif;
@@ -35,7 +41,9 @@
             );
 
         display: flex;
+
         justify-content: center;
+
         align-items: center;
 
         padding: 25px;
@@ -59,6 +67,7 @@
         position: fixed;
 
         width: 350px;
+
         height: 350px;
 
         border-radius: 50%;
@@ -70,25 +79,29 @@
         pointer-events: none;
     }
 
+
     body::before {
 
         background: #e53935;
 
         top: -150px;
+
         left: -150px;
     }
+
 
     body::after {
 
         background: #1565c0;
 
         bottom: -150px;
+
         right: -150px;
     }
 
 
     /* =========================
-       CONTENEDOR PRINCIPAL
+       CONTENEDOR
     ========================= */
 
     .container {
@@ -220,7 +233,7 @@
 
 
     /* =========================
-       TARJETA DE MISIÓN
+       TARJETA DE MISION
     ========================= */
 
     .mission-card {
@@ -292,41 +305,8 @@
 
 
     /* =========================
-       CAJA DEL AUDIO
+       AUDIO OCULTO
     ========================= */
-
-    .audio-box {
-
-        margin-top: 30px;
-
-        padding: 22px;
-
-        border-radius: 18px;
-
-        background:
-            rgba(0,0,0,0.35);
-
-        border:
-            1px solid rgba(255,255,255,0.15);
-
-        text-align: center;
-    }
-
-
-    .audio-title {
-
-        font-size: 18px;
-
-        font-weight: bold;
-
-        margin-bottom: 0;
-    }
-
-
-    /*
-        EL AUDIO EXISTE PERO NO SE
-        MUESTRA EL REPRODUCTOR.
-    */
 
     #audioMision {
 
@@ -416,6 +396,7 @@
 
             font-size: 55px;
         }
+
     }
 
 </style>
@@ -428,28 +409,34 @@
 <div class="container">
 
 ```
-<!-- NINJA Y DRAGON -->
+<!-- NINJA -->
 
 <div class="ninja">
+
     🥷🐉
+
 </div>
 
 
 <!-- TITULO -->
 
 <h1>
+
     Misión Ninja Eric
+
 </h1>
 
 
 <!-- SUBTITULO -->
 
 <div class="subtitle">
+
     Una misión secreta ha llegado hasta ti...
+
 </div>
 
 
-<!-- UNICO BOTON PARA EL AUDIO -->
+<!-- BOTON PARA REPRODUCIR EL AUDIO -->
 
 <button
     class="start-button"
@@ -460,12 +447,12 @@
 </button>
 
 
-<!-- TARJETA -->
+<!-- TARJETA DE MISION -->
 
 <div class="mission-card">
 
 
-    <!-- TITULO DE LA MISION -->
+    <!-- TITULO -->
 
     <div class="mission-title">
 
@@ -560,6 +547,7 @@
 
     </div>
 
+
     <!-- RECOMPENSA -->
 
     <div class="reward">
@@ -588,7 +576,7 @@
 </div>
 
 
-<!-- PIE -->
+<!-- PIE DE PAGINA -->
 
 <div class="footer">
 
@@ -599,9 +587,17 @@
 
 </div>
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- AUDIO OCULTO -->
+
+<audio id="audioMision" preload="auto">
+
+```
+<source
+    src="cole_eric_listo.mp3"
+    type="audio/mpeg">
+```
+
+</audio>
 
 <script>
 
