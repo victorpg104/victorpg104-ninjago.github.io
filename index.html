@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="es">
-
 <head>
-
-```
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>🥷 Misión Ninja Eric</title>
-
 <!-- Icono de la pestaña -->
 <link rel="icon" href="data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥷</text></svg>">
-
-
 <style>
-
     * {
         box-sizing: border-box;
     }
-
-
     body {
-
         margin: 0;
-
         min-height: 100vh;
-
         font-family: Arial, Helvetica, sans-serif;
-
         color: white;
-
         background:
             radial-gradient(
                 circle at top,
@@ -39,581 +23,311 @@
                 #111 45%,
                 #050505 100%
             );
-
         display: flex;
-
         justify-content: center;
-
         align-items: center;
-
         padding: 25px;
-
         overflow-x: hidden;
-
         /* TODO EL TEXTO EN MAYÚSCULAS */
         text-transform: uppercase;
     }
-
-
     /* =========================
        LUCES DE FONDO
     ========================= */
-
     body::before,
     body::after {
-
         content: "";
-
         position: fixed;
-
         width: 350px;
-
         height: 350px;
-
         border-radius: 50%;
-
         filter: blur(100px);
-
         opacity: 0.15;
-
         pointer-events: none;
     }
-
-
     body::before {
-
         background: #e53935;
-
         top: -150px;
-
         left: -150px;
     }
-
-
     body::after {
-
         background: #1565c0;
-
         bottom: -150px;
-
         right: -150px;
     }
-
-
     /* =========================
        CONTENEDOR
     ========================= */
-
     .container {
-
         width: 100%;
-
         max-width: 700px;
-
         position: relative;
-
         z-index: 1;
     }
-
-
     /* =========================
        NINJA
     ========================= */
-
     .ninja {
-
         text-align: center;
-
         font-size: 70px;
-
         animation: float 3s ease-in-out infinite;
     }
-
-
     @keyframes float {
-
         0%,
         100% {
-
             transform: translateY(0);
         }
-
         50% {
-
             transform: translateY(-10px);
         }
     }
-
-
     /* =========================
        TITULO
     ========================= */
-
     h1 {
-
         text-align: center;
-
         margin: 5px 0 8px;
-
         font-size: clamp(32px, 8vw, 52px);
-
         letter-spacing: 3px;
-
         text-transform: uppercase;
-
         text-shadow:
             3px 3px 0 #000,
             0 0 20px rgba(255,255,255,0.25);
     }
-
-
     /* =========================
        SUBTITULO
     ========================= */
-
     .subtitle {
-
         text-align: center;
-
         color: #ddd;
-
         margin-bottom: 25px;
-
         font-size: 17px;
     }
-
-
     /* =========================
        BOTON PRINCIPAL
     ========================= */
-
     .start-button {
-
         display: block;
-
         margin: 0 auto 25px;
-
         padding: 16px 28px;
-
         border: none;
-
         border-radius: 50px;
-
         background: #b71c1c;
-
         color: white;
-
         font-size: 17px;
-
         font-weight: bold;
-
         cursor: pointer;
-
         box-shadow:
             0 8px 25px rgba(0,0,0,0.4);
-
         transition:
             transform 0.2s,
             background 0.2s;
     }
-
-
     .start-button:hover {
-
         transform: scale(1.05);
-
         background: #d32f2f;
     }
-
-
     .start-button:active {
-
         transform: scale(0.98);
     }
-
-
     /* =========================
        TARJETA DE MISION
     ========================= */
-
     .mission-card {
-
         background:
             linear-gradient(
                 145deg,
                 rgba(255,255,255,0.10),
                 rgba(255,255,255,0.03)
             );
-
         border:
             2px solid rgba(255,255,255,0.18);
-
         border-radius: 22px;
-
         padding: 30px;
-
         box-shadow:
             0 20px 50px rgba(0,0,0,0.6),
             inset 0 1px 0 rgba(255,255,255,0.08);
-
         backdrop-filter: blur(10px);
     }
-
-
     /* =========================
        TITULO DE LA MISION
     ========================= */
-
     .mission-title {
-
         text-align: center;
-
         font-size: 22px;
-
         font-weight: bold;
-
         margin-bottom: 25px;
-
         text-transform: uppercase;
-
         letter-spacing: 2px;
     }
-
-
     /* =========================
        TEXTO
     ========================= */
-
     .text {
-
         font-size: 18px;
-
         line-height: 1.7;
     }
-
-
     .text p {
-
         margin: 0 0 20px;
     }
-
-
     .highlight {
-
         font-weight: bold;
     }
-
-
     /* =========================
        AUDIO OCULTO
     ========================= */
-
     #audioMision {
-
         display: none;
     }
-
-
     /* =========================
        RECOMPENSA
     ========================= */
-
     .reward {
-
         margin-top: 25px;
-
         padding: 20px;
-
         text-align: center;
-
         border-radius: 16px;
-
         background:
             rgba(255,255,255,0.06);
-
         border:
             1px dashed rgba(255,255,255,0.3);
     }
-
-
     .reward .emoji {
-
         font-size: 40px;
     }
-
-
     .reward strong {
-
         display: block;
-
         margin-top: 8px;
-
         font-size: 20px;
     }
-
-
     /* =========================
        PIE DE PAGINA
     ========================= */
-
     .footer {
-
         text-align: center;
-
         margin-top: 25px;
-
         color: #aaa;
-
         font-size: 14px;
     }
-
-
     /* =========================
        MOVIL
     ========================= */
-
     @media (max-width: 600px) {
-
         body {
-
             padding: 15px;
         }
-
-
         .mission-card {
-
             padding: 22px;
         }
-
-
         .text {
-
             font-size: 17px;
         }
-
-
         .ninja {
 
             font-size: 55px;
         }
-
     }
-
 </style>
-```
-
 </head>
-
 <body>
-
 <div class="container">
-
-```
 <!-- NINJA -->
-
 <div class="ninja">
-
     🥷🐉
-
 </div>
-
-
 <!-- TITULO -->
-
 <h1>
-
     Misión Ninja Eric
-
 </h1>
-
-
 <!-- SUBTITULO -->
-
 <div class="subtitle">
-
     Una misión secreta ha llegado hasta ti...
-
 </div>
-
-
 <!-- BOTON PARA REPRODUCIR EL AUDIO -->
-
 <button
     class="start-button"
     onclick="reproducirMision()">
-
     ▶ ESCUCHAR LA MISIÓN
-
 </button>
-
-
 <!-- TARJETA DE MISION -->
-
 <div class="mission-card">
-
-
     <!-- TITULO -->
-
     <div class="mission-title">
-
         ⚔️ Misión especial ⚔️
-
     </div>
-
-
     <!-- TEXTO -->
-
     <div class="text">
-
-
         <p>
-
             ¡Hola,
             <span class="highlight">
                 Ninja Eric!
             </span>
-
             🥷🐉
-
         </p>
-
-
         <p>
-
             Tengo una misión muy importante para ti...
-
         </p>
-
-
         <p>
-
             Tu misión es demostrar que eres un
-
             <span class="highlight">
                 auténtico ninja:
             </span>
-
             escuchar, hacer caso, portarte muy bien
             y ayudar cuando sea necesario.
-
             💪🥷
-
         </p>
-
-
         <p>
-
             Si completas la misión
-
             <span class="highlight">
                 —¡que sé que eres capaz!—
             </span>
-
             dentro de este sobre encontrarás un
             adelanto de tu recompensa especial.
-
             🎁⚔️
-
         </p>
-
-
         <p>
-
             ¡Prepárate, reúne tu valor y demuestra
             de lo que eres capaz!
-
         </p>
-
-
         <p>
-
             <span class="highlight">
-
                 ¡La misión comienza ahora! 🐉
-
             </span>
-
         </p>
-
-
         <p>
-
             ¡Buena suerte, Ninja Eric!
-
             🥷⚔️
-
         </p>
-
-
     </div>
-
-
     <!-- RECOMPENSA -->
-
     <div class="reward">
-
-
         <div class="emoji">
-
             🎁🐉⚔️
-
         </div>
-
-
         <strong>
-
             Tu recompensa te espera...
-
         </strong>
-
-
         Completa tu misión, Ninja Eric.
-
-
     </div>
-
-
 </div>
-
-
 <!-- PIE DE PAGINA -->
-
 <div class="footer">
-
     🥷 Solo los verdaderos ninjas pueden completar esta misión 🥷
-
 </div>
-```
-
 </div>
-
 <!-- AUDIO OCULTO -->
-
 <audio id="audioMision" preload="auto">
-
-```
 <source
     src="cole_eric_listo.mp3"
     type="audio/mpeg">
-```
-
 </audio>
-
 <script>
-
     function reproducirMision() {
-
         const audio =
             document.getElementById("audioMision");
-
         audio.currentTime = 0;
-
         audio.play();
-
     }
-
 </script>
-
 </body>
-
 </html>
